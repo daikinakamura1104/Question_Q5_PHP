@@ -8,16 +8,15 @@
         }
 
         public function fruitdetail($fruit){
-            $prices1 = $fruit->getPrices1();
             $names = $fruit->getName();
-            $sum = $fruit->getSum1();
+            $sum = $fruit->getSum();
            echo "果物の種類は".$names[0]."と".$names[1]."です。"."\n";
-           echo "果物の数は".count($prices1)."個ずつです。"."\n";
+           echo "果物の数は".$sum."個ずつです。"."\n";
         }
 
         public function calculation($fruit){
             $names = $fruit->getName();
-            
+
             $price1 = $fruit->getPrices1();
             $maxprice1 = max($price1);
             $price2 = $fruit->getPrices2();

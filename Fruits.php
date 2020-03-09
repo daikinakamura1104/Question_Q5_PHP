@@ -3,8 +3,8 @@
         public $name =array("桃","イチゴ");
         public $prices1 = array();
         public $prices2 = array();
-        public $sum1 = array();
-        public $sum2 = array();
+        public $sum = 15;
+        
      
 
         public function getName(){
@@ -25,14 +25,8 @@
             return $this->prices2;
         }
 
-        public function getSum1(){
-            $this->sum1 = count($prices1);
-            return $this->sum1;
-        }
-
-        public function getSum2(){
-            $this->sum2 = count($prices2);
-            return $this->sum2;
+        public function getSum(){
+            return $this->sum;
         }
     }
 ?>
