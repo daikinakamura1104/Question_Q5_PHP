@@ -4,7 +4,7 @@
         public function start($fruit){
             echo "----マーケット開始----"."\n";
             $this->fruitdetail($fruit);
-            $this-> calculation($fruit);
+            $this->calculation($fruit);
         }
 
         public function fruitdetail($fruit){
@@ -16,7 +16,6 @@
 
         public function calculation($fruit){
             $names = $fruit->getName();
-
             $price1 = $fruit->getPrices1();
             $maxprice1 = max($price1);
             $price2 = $fruit->getPrices2();

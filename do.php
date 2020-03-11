@@ -1,8 +1,8 @@
 <?php
-require_once("Fruits.php");
+require_once("Fruit.php");
 require_once("Market.php");
 
-$fruit = new Fruits();
+$fruit = new Fruit();
 $market = new Market();
 
 $market->start($fruit);

@@ -1,5 +1,5 @@
 <?php
-    class Fruits{
+    class Fruit{
         public $name =array("桃","イチゴ");
         public $prices1 = array();
         public $prices2 = array();
