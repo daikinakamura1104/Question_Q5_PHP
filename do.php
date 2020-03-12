@@ -1,10 +1,13 @@
 <?php
-require_once("Fruit.php");
+require_once("Strawberry.php");
+require_once("Peach.php");
 require_once("Market.php");
 
-$fruit = new Fruit();
+
+$strawberry = new Strawberry();
+$peach = new Peach();
 $market = new Market();
 
-$market->start($fruit);
+$market->start($strawberry,$peach);
 
 ?>
