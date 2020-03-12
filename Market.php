@@ -1,43 +1,46 @@
 <?php
     class Market{
        
-        public function start($fruit){
+        public function start($strawberry,$peach){
             echo "----マーケット開始----"."\n";
-            $this->fruitdetail($fruit);
-            $this->calculation($fruit);
+            $this->fruitdetail($strawberry,$peach);
+            $this->calculation($strawberry,$peach);
         }
 
-        public function fruitdetail($fruit){
-            $names = $fruit->getName();
-            $sum = $fruit->getSum();
-           echo "果物の種類は".$names[0]."と".$names[1]."です。"."\n";
-           echo "果物の数は".$sum."個ずつです。"."\n";
+        public function fruitdetail($strawberry,$peach){
+            $nameofStrawberry = $strawberry->getName();
+            $nameofPeach = $peach->getName();
+            $sumofStrawberry = $strawberry->getSum();
+            $sumofPeach = $peach->getSum();
+           echo "果物の種類は".$nameofStrawberry."と".$nameofPeach."です。"."\n";
+           echo "果物の数は".$nameofStrawberry."は".$sumofStrawberry."個、".$nameofPeach."は".$sumofPeach."個です。"."\n";
         }
 
-        public function calculation($fruit){
-            $names = $fruit->getName();
-            $price1 = $fruit->getPrices1();
-            $maxprice1 = max($price1);
-            $price2 = $fruit->getPrices2();
-            $maxprice2 = max($price2);
+        public function calculation($strawberry,$peach){
+            $nameofStrawberry = $strawberry->getName();
+            $nameofPeach = $peach->getName();
+            $priceofStrawberry = $strawberry->getPrices();
+            $priceofPeach = $peach->getPrices();
+            $maxpriceofStrawberry = max($priceofStrawberry);
+            $maxpriceofPeach = max($priceofPeach);
             echo "① 果物の最高値"."\n";
-            echo $names[0]."の最高値は".$maxprice1."円です。"."\n";
-            echo $names[1]."の最高値は".$maxprice2."円です。"."\n";
+            echo $nameofPeach."の最高値は".$maxpriceofPeach."円です。"."\n";
+            echo $nameofStrawberry."の最高値は".$maxpriceofStrawberry."円です。"."\n";
             
 
-            $minprice1 = min($price1);
-            $minprice2 = min($price2);
+            $minpriceofStrawberry = min($priceofStrawberry);
+            $minpriceofPeach = min($priceofPeach);
             echo  "② 果物の最安値"."\n";
-            echo $names[0]."の最安値は".$minprice1."円です。"."\n";
-            echo $names[1]."の最安値は".$minprice2."円です。"."\n";
+            echo $nameofPeach."の最安値は".$minpriceofPeach."円です。"."\n";
+            echo $nameofStrawberry."の最安値は".$minpriceofStrawberry."円です。"."\n";
 
-            $sum1 = array_sum($price1);
-            $avg1 = $sum1/count($price1);
-            $sum2 = array_sum($price2);
-            $avg2 = $sum2/count($price2);
+            $sumpriceofStrawberry = array_sum($priceofStrawberry);
+            $avgofStrawberry = $sumpriceofStrawberry/count($priceofStrawberry);
+            $sumpriceofPeach = array_sum($priceofPeach);
+            $avgofPeach = $sumpriceofPeach/count($priceofPeach);
             echo  "③ 果物の平均価格"."\n";
-            echo $names[0]."の平均価格は".floor($avg1)."円です。"."\n";
-            echo $names[1]."の平均価格は".floor($avg2)."円です。"."\n";
+            echo $nameofPeach."の平均価格は".floor($avgofPeach)."円です。"."\n";
+            echo $nameofStrawberry."の平均価格は".floor($avgofStrawberry)."円です。"."\n";
 
             echo "----マーケット終了----"."\n";
 
